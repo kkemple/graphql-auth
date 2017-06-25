@@ -2,13 +2,15 @@
   "name": "graphql-auth",
   "version": "0.0.1",
   "description": "GraphQL authentication and authorization middleware",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
+    "build": "rimraf build && babel --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
+    "build:watch": "babel -w --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
     "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kkemple/graphql-auth.git"
+    "url": "https://github.com/kkemple/graphql-auth"
   },
   "keywords": [
     "graphql",
@@ -21,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/kkemple/graphql-auth/issues"
   },
-  "homepage": "https://github.com/kkemple/graphql-auth#readme"
+  "homepage": "https://github.com/kkemple/graphql-auth#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-2": "^6.24.1",
+    "rimraf": "^2.6.1"
+  }
 }
