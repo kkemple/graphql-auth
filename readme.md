@@ -50,7 +50,7 @@ const register = function(server, options, next) {
             schema: executableSchema,
             context: {
               auth: {
-                isAuthenticated: !!request.auth.isAuthenticated,
+                isAuthenticated: request.auth.isAuthenticated,
                 scope: request.auth.credentials
                   ? request.auth.credentials.scope
                   : null,
