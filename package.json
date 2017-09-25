@@ -1,6 +1,6 @@
 {
   "name": "graphql-auth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GraphQL authentication and authorization middleware",
   "main": "build/index.js",
   "scripts": {
