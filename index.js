@@ -39,8 +39,8 @@ export default function withAuth(scope, callback) {
       );
 
     if (
-      (requiredScope.length && !context.auth.scope) ||
-      (requiredScope.length &&
+      (requiredScope && requiredScope.length && !context.auth.scope) ||
+      (requiredScope && requiredScope.length &&
         !validateScope(requiredScope, context.auth.scope))
     ) {
       return new AuthorizationError();
