@@ -18,7 +18,11 @@ function validateScope(required, provided) {
   let hasScope = false;
 
   required.map(scope => {
-    if (provided.includes(scope)) hasScope = true;
+    provided.forEach(function(perm) {
+      // user:* -> user:create, user:view:self
+      var permRe = new RegExp('^' + perm.replace('*', '.*') + '$');
+      if (permRe.exec(scope)) hasScope = true;
+    });
   });
 
   return hasScope;
