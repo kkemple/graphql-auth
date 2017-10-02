@@ -8,7 +8,7 @@
     "build": "rimraf build && babel --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
     "contrib:add": "all-contributors add",
     "contrib:build": "all-contributors generate",
-    "test": "jest test"
+    "test": "standard && jest test"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-2": "^6.24.1",
     "jest": "^21.2.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "standard": "^10.0.3"
   }
 }
