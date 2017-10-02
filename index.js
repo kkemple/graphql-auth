@@ -1,4 +1,4 @@
-class ContextError extends Error {
+export class ContextError extends Error {
   constructor(message = '`auth` property not found on context!') {
     super(message);
     this.message = message;
@@ -6,7 +6,7 @@ class ContextError extends Error {
   }
 }
 
-class AuthorizationError extends Error {
+export class AuthorizationError extends Error {
   constructor(message = 'Permission Denied!') {
     super(message);
     this.message = message;
