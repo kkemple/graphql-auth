@@ -131,7 +131,7 @@ const resolvers = {
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars0.githubusercontent.com/u/332115?v=4&s=460" width="100px;"/><br /><sub>Mihovil</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson "Code") | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4&s=460" width="100px;"/><br /><sub>HaNdTriX</sub>](https://github.com/HaNdTriX)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Code") |
+| [<img src="https://avatars1.githubusercontent.com/u/332115?v=4" width="100px;"/><br /><sub>artgibson</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson "Code") | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4" width="100px;"/><br /><sub>HaNdTriX</sub>](http://henrikwenz.de/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Code") [📖](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Documentation") |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
