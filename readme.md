@@ -1,4 +1,6 @@
-# GraphQL Auth
+# GraphQL Auth 
+
+[![Travis Build Status](https://travis-ci.org/kkemple/graphql-auth.svg?branch=master)](https://travis-ci.org/kkemple/graphql-auth)
 
 🔒 Authentication and authorization middleware for GraphQL.
 
