@@ -6,5 +6,15 @@
   ],
   "imageSize": 100,
   "commit": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "artgibson",
+      "name": "artgibson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/332115?v=4",
+      "profile": "https://github.com/artgibson",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
 }
