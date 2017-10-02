@@ -5,25 +5,6 @@
     "README.md"
   ],
   "imageSize": 100,
-  "commit": false,
-  "contributors": [
-    {
-      "login": "artgibson",
-      "name": "Mihovil",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/332115?v=4&s=460",
-      "profile": "https://github.com/artgibson",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "HaNdTriX",
-      "name": "HaNdTriX",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/1265681?v=4&s=460",
-      "profile": "https://github.com/HaNdTriX",
-      "contributions": [
-        "code"
-      ]
-    }
-  ]
+  "commit": true,
+  "contributors": []
 }
