@@ -32,7 +32,7 @@ export default function withAuth(scope, callback) {
   const next = callback ? callback : scope;
   let requiredScope = callback ? scope : null;
 
-  return async function(_, __, context) {
+  return async function(_, __, context, info) {
     if (!context.auth) return new ContextError();
     if (!context.auth.isAuthenticated)
       return new AuthorizationError('Not Authenticated!');
@@ -50,6 +50,6 @@ export default function withAuth(scope, callback) {
       return new AuthorizationError();
     }
 
-    return next(_, __, context);
+    return next(_, __, context, info);
   };
 }
