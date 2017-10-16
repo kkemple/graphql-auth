@@ -25,6 +25,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "swissspidy",
+      "name": "Pascal Birchler",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/841956?v=4",
+      "profile": "https://pascalbirchler.com",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }

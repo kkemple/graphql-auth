@@ -92,7 +92,7 @@ import withAuth from 'graphql-auth';
 
 const resolvers = {
   Query: {
-    users: withAuth((root, args, context) => { ... }),
+    users: withAuth((root, args, context, info) => { ... }),
     ...
   }
 }
@@ -105,7 +105,7 @@ import withAuth from 'graphql-auth';
 
 const resolvers = {
   Query: {
-    users: withAuth(['users:view'], (root, args, context) => { ... }),
+    users: withAuth(['users:view'], (root, args, context, info) => { ... }),
     ...
   }
 }
@@ -119,8 +119,8 @@ import withAuth from 'graphql-auth';
 const resolvers = {
   Query: {
     users: withAuth(
-      (root, args, context) => { /* return scope based on resolver args */ },
-      (root, args, context) => { ... }),
+      (root, args, context, info) => { /* return scope based on resolver args */ },
+      (root, args, context, info) => { ... }),
     ...
   }
 }
@@ -131,8 +131,8 @@ const resolvers = {
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars1.githubusercontent.com/u/332115?v=4" width="100px;"/><br /><sub>artgibson</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson "Code") | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4" width="100px;"/><br /><sub>HaNdTriX</sub>](http://henrikwenz.de/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Code") [📖](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Documentation") |
-| :---: | :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/332115?v=4" width="100px;"/><br /><sub>artgibson</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson "Code") | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4" width="100px;"/><br /><sub>HaNdTriX</sub>](http://henrikwenz.de/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Code") [📖](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/841956?v=4" width="100px;"/><br /><sub>Pascal Birchler</sub>](https://pascalbirchler.com)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=swissspidy "Code") |
+| :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
