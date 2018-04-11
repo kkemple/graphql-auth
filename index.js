@@ -41,6 +41,7 @@ export default function withAuth(scope, callback) {
       requiredScope = await Promise.resolve().then(() =>
         requiredScope(_, __, context, info),
       );
+      
     if (
       (requiredScope && requiredScope.length && !context.auth.scope) ||
       (requiredScope &&
