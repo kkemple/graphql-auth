@@ -30,17 +30,19 @@ function validateScope(required, provided) {
 
 export default function withAuth(scope, callback) {
   const next = callback ? callback : scope;
-  let requiredScope = callback ? scope : null;
 
   return async function(_, __, context, info) {
     if (!context.auth) return new ContextError();
     if (!context.auth.isAuthenticated)
       return new AuthorizationError('Not Authenticated!');
 
-    if (requiredScope && typeof requiredScope === 'function')
+    let requiredScope = callback ? scope : null;
+
+    if (requiredScope && typeof requiredScope === 'function') {
       requiredScope = await Promise.resolve().then(() =>
         requiredScope(_, __, context, info),
       );
+    }
 
     if (
       (requiredScope && requiredScope.length && !context.auth.scope) ||
