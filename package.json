@@ -3,11 +3,10 @@
   "version": "0.2.2",
   "description": "GraphQL authentication and authorization middleware",
   "main": "build/index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "build:watch":
-      "babel -w --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
-    "build":
-      "rimraf build && babel --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
+    "build:watch": "babel -w --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
+    "build": "rimraf build && babel --source-maps --ignore '**/__tests__/**' index.js --out-dir build",
     "contrib:add": "all-contributors add",
     "contrib:build": "all-contributors generate",
     "test": "jest test"
@@ -16,7 +15,12 @@
     "type": "git",
     "url": "https://github.com/kkemple/graphql-auth"
   },
-  "keywords": ["graphql", "auth", "authentication", "authorization"],
+  "keywords": [
+    "graphql",
+    "auth",
+    "authentication",
+    "authorization"
+  ],
   "author": "kurtiskemple@gmail.com",
   "license": "MIT",
   "bugs": {
