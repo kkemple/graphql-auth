@@ -6,6 +6,7 @@ export default withAuth;
 
 declare function withAuth(resolve: GraphqlAuth.Resolver): GraphqlAuth.Resolver;
 declare function withAuth(scopes: string[], resolver: GraphqlAuth.Resolver): GraphqlAuth.Resolver;
+declare function withAuth(scopesBuilder: (root: any, args: any, context: any, info: any) => string[], resolver: GraphqlAuth.Resolver): GraphqlAuth.Resolver;
 
 // Internal scope, avoid collision with other global definitions
 declare namespace GraphqlAuth {
