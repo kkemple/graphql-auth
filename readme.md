@@ -1,6 +1,4 @@
-# GraphQL Auth 
-
-[![Travis Build Status](https://travis-ci.org/kkemple/graphql-auth.svg?branch=master)](https://travis-ci.org/kkemple/graphql-auth)
+# GraphQL Auth
 
 🔒 Authentication and authorization middleware for GraphQL.
 
@@ -9,6 +7,7 @@
 ## Getting Started
 
 ### How It Works
+
 `graphql-auth` exports a single function (middleware) `withAuth`. This function takes two parameters, the first is `scope` (if any) for authorization, and the second is the `callback` to call when auth checking is complete. Let's look at an example:
 
 ```javascript
@@ -23,6 +22,7 @@ const resolvers = {
 ```
 
 The way this works is `withAuth` looks for a special `auth` property on the `context` of the resolver. It expects the `auth` property to have two properties of its own:
+
 1. `isAuthenticated` to tell if the user is logged in
 2. `scope` scope of the logged in user (optional)
 
@@ -65,7 +65,7 @@ const register = function(server, options, next) {
     error => {
       if (error) return next(error);
       next();
-    },
+    }
   );
 };
 
@@ -76,16 +76,18 @@ register.attributes = {
 
 export default register;
 ```
+
 > For more in depth examples take a look at the [`graphql-auth-examples`](https://github.com/kkemple/graphql-auth-examples) repo.
 
-
 ### Installation
+
 ```shell
 yarn add graphql-auth
 ```
+
 ### withAuth([scope,] callback)
 
-*Without scope*:
+_Without scope_:
 
 ```javascript
 import withAuth from 'graphql-auth';
@@ -98,7 +100,7 @@ const resolvers = {
 }
 ```
 
-*With scope*:
+_With scope_:
 
 ```javascript
 import withAuth from 'graphql-auth';
@@ -111,7 +113,7 @@ const resolvers = {
 }
 ```
 
-*With dynamic scope*:
+_With dynamic scope_:
 
 ```javascript
 import withAuth from 'graphql-auth';
@@ -131,8 +133,11 @@ const resolvers = {
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars1.githubusercontent.com/u/332115?v=4" width="100px;"/><br /><sub>artgibson</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson "Code") | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4" width="100px;"/><br /><sub>HaNdTriX</sub>](http://henrikwenz.de/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Code") [📖](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/841956?v=4" width="100px;"/><br /><sub>Pascal Birchler</sub>](https://pascalbirchler.com)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=swissspidy "Code") | [<img src="https://avatars2.githubusercontent.com/u/6640835?v=4" width="100px;"/><br /><sub>Andréas Hanss</sub>](https://www.linkedin.com/in/andreas-hanss/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=ScreamZ "Code") [📖](https://github.com/kkemple/graphql-auth/commits?author=ScreamZ "Documentation") |
-| :---: | :---: | :---: | :---: |
+
+| [<img src="https://avatars1.githubusercontent.com/u/332115?v=4" width="100px;"/><br /><sub>artgibson</sub>](https://github.com/artgibson)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=artgibson 'Code') | [<img src="https://avatars3.githubusercontent.com/u/1265681?v=4" width="100px;"/><br /><sub>HaNdTriX</sub>](http://henrikwenz.de/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX 'Code') [📖](https://github.com/kkemple/graphql-auth/commits?author=HaNdTriX 'Documentation') | [<img src="https://avatars1.githubusercontent.com/u/841956?v=4" width="100px;"/><br /><sub>Pascal Birchler</sub>](https://pascalbirchler.com)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=swissspidy 'Code') | [<img src="https://avatars2.githubusercontent.com/u/6640835?v=4" width="100px;"/><br /><sub>Andréas Hanss</sub>](https://www.linkedin.com/in/andreas-hanss/)<br />[💻](https://github.com/kkemple/graphql-auth/commits?author=ScreamZ 'Code') [📖](https://github.com/kkemple/graphql-auth/commits?author=ScreamZ 'Documentation') |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
