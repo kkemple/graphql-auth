@@ -29,7 +29,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "app",
+  "name": "graphql-auth",
   "author": "Kurt Kemple",
   "module": "dist/app.esm.js",
   "devDependencies": {
